@@ -1,8 +1,4 @@
-require('babel/register');
-var Node = require('./node.js');
-var NumberNode = require('./number_node.js');
-var OperatorNode = require('./operator_node.js');
-
+var canvas = document.getElementById('canvas');
 
 var expr3 = new Node();
 
@@ -19,15 +15,9 @@ term1.appendChild(new NumberNode(4));
 expr3.appendChild(term1);
 
 
-console.log(expr3.toString());
 
-mult1.evaluate();
+//
+//var ctx = canvas.getContext('2d');
+//ctx.fillStyle = 'black';
+//ctx.fillText(str, 100, 100);
 
-console.log('----');
-console.log(expr3.toString());
-
-console.log('hello, world');
-
-window.Node = Node;
-window.NumberNode = NumberNode;
-window.OperatorNode = OperatorNode;
